@@ -9,16 +9,7 @@
 
     <title>Frontend Mentor | Bookmark landing page</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <link rel="stylesheet" href="./styles/style.css" class="css" />
   </head>
   <body>
     <header class="navigation">
@@ -27,155 +18,200 @@
         <a href="#" class="navigation__link">FEATURES</a>
         <a href="#" class="navigation__link">PRICING</a>
         <a href="#" class="navigation__link">CONTACT</a>
-        <button class="navigation__btn">LOGIN</button>
+        <button class="navigation__login">LOGIN</button>
       </nav>
     </header>
     <section class="about">
       <div class="about__info">
         <h1 class="about__title">A Simple Bookmark Manager</h1>
-        <p class="about__description">
+        <p class="description">
           A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load
           instantly. Try it for free.
         </p>
         <div class="about__browsers">
-          <button class="about__chrome">Get it on Chrome</button>
-          <button class="about__firefox">Get it on FireFox</button>
+          <button class="btn btn--blue btn--info">Get it on Chrome</button>
+          <button class="btn btn--light btn--info">Get it on FireFox</button>
         </div>
-        <div class="about__ilustration">
-          <img src="./images/illustration-hero.svg" alt="Illustration hero" class="about__img" />
-        </div>
+      </div>
+      <div class="about__illustration">
+        <img src="./images/illustration-hero.svg" alt="Illustration hero" class="about__img" />
       </div>
     </section>
+
+    <div class="box">
+      <h2 class="title">Features</h2>
+      <p class="description center">
+        Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices
+        so you can access them on the go.
+      </p>
+    </div>
+
     <section class="features">
-      <div class="box">
-        <h2 class="title">Features</h2>
-        <p class="description">
-          Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices
-          so you can access them on the go.
-        </p>
-      </div>
       <div class="features__options">
-        <div class="features__item">Simple Bookmarking</div>
+        <div class="features__item features__item--active">Simple Bookmarking</div>
         <div class="features__item">Speedy Searching</div>
         <div class="features__item">Easy Sharing</div>
       </div>
       <div class="features__slider">
-        <div class="features__simple">
+        <div class="features__box">
           <div class="features__illustration">
             <img src="./images/illustration-features-tab-1.svg" alt="Illustration tab1" class="features__img" />
           </div>
           <div class="features__content">
-            <h3 class="features__content-title">Bookmark in one click</h3>
-            <p class="features__content-description">
+            <h3 class="title">Bookmark in one click</h3>
+            <p class="description">
               Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you
               manage your favourite sites.
             </p>
-            <button class="features__content-btn">More info</button>
+            <button class="btn btn--blue btn--info">More info</button>
           </div>
         </div>
-        <div class="features__simple">
+        <div class="features__box features__box--hide">
           <div class="features__illustration">
             <img src="./images/illustration-features-tab-2.svg" alt="Illustration tab2" class="features__img" />
           </div>
           <div class="features__content">
-            <h3 class="features__content-title">Intelligent search</h3>
-            <p class="features__content-description">
+            <h3 class="title">Intelligent search</h3>
+            <p class="description">
               Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your
               bookmarks.
             </p>
-            <button class="features__content-btn">More info</button>
+            <button class="btn btn--blue btn--info">More info</button>
           </div>
         </div>
-        <div class="features__simple">
+        <div class="features__box features__box--hide">
           <div class="features__illustration">
             <img src="./images/illustration-features-tab-3.svg" alt="Illustration tab3" class="features__img" />
           </div>
           <div class="features__content">
-            <h3 class="features__content-title">Share your bookmarks</h3>
-            <p class="features__content-description">
+            <h3 class="title">Share your bookmarks</h3>
+            <p class="description">
               Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a
               button.
             </p>
-            <button class="features__content-btn">More info</button>
+            <button class="btn btn--blue btn--info">More info</button>
           </div>
         </div>
       </div>
     </section>
 
+    <div class="box">
+      <h2 class="box__title">Download the extension</h2>
+      <p class="description center">
+        We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.
+      </p>
+    </div>
     <section class="download">
-      <div class="box">
-        <h2 class="title">Download the extension</h2>
-        <p class="description">
-          We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.
-        </p>
+      <div class="download__item">
+        <img src="./images/logo-chrome.svg" alt="Download Chrome" class="download__img" />
+        <h4 class="download__title">Add to Chrome</h4>
+        <p class="download__version">Minimum version 62</p>
+        <img src="./images/bg-dots.svg" alt="Dots" class="download__dots" />
+        <button class="btn btn--blue btn--w">Add & Install Extension</button>
       </div>
-      <div class="download__items">
-        <div class="download__item">
-          <img src="./images/logo-chrome.svg" alt="Download Chrome" class="download__img" />
-          <h4 class="download__title">Add to Chrome</h4>
-          <p class="download__version">Minimum version 62</p>
-          <img src="./images/bg-dots.svg" alt="Dots" class="download__dots" />
-          <button class="download__btn">Add & Install Extension</button>
-        </div>
-        <div class="download__item download__item--firefox">
-          <img src="./images/logo-firefox.svg" alt="Download Firefox" class="download__img" />
-          <h4 class="download__title">Add to Firefox</h4>
-          <p class="download__version">Minimum version 55</p>
-          <img src="./images/bg-dots.svg" alt="Dots" class="download__dots" />
-          <button class="download__btn">Add & Install Extension</button>
-        </div>
-        <div class="download__item download__item--opera">
-          <img src="./images/logo-opera.svg" alt="Download Opera" class="download__img" />
-          <h4 class="download__title">Add to Opera</h4>
-          <p class="download__version">Minimum version 46</p>
-          <img src="./images/bg-dots.svg" alt="Dots" class="download__dots" />
-          <button class="download__btn">Add & Install Extension</button>
-        </div>
+      <div class="download__item download__item--firefox">
+        <img src="./images/logo-firefox.svg" alt="Download Firefox" class="download__img" />
+        <h4 class="download__title">Add to Firefox</h4>
+        <p class="download__version">Minimum version 55</p>
+        <img src="./images/bg-dots.svg" alt="Dots" class="download__dots" />
+        <button class="btn btn--blue btn--w">Add & Install Extension</button>
+      </div>
+      <div class="download__item download__item--opera">
+        <img src="./images/logo-opera.svg" alt="Download Opera" class="download__img" />
+        <h4 class="download__title">Add to Opera</h4>
+        <p class="download__version">Minimum version 46</p>
+        <img src="./images/bg-dots.svg" alt="Dots" class="download__dots" />
+        <button class="btn btn--blue btn--w">Add & Install Extension</button>
       </div>
     </section>
 
+    <div class="box">
+      <h2 class="title">Frequently Asked Questions</h2>
+      <p class="description center">
+        Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.
+      </p>
+    </div>
+
     <section class="questions">
-      <div class="box">
-        <h2 class="title">Frequently Asked Questions</h2>
-        <p class="description">
-          Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.
-        </p>
-      </div>
-      <div class="questions__box">
+      <!-- <div class="questions__box">
         <details>
           <summary class="questions__question">What is Bookmark?</summary>
           <p class="questions_answer">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel quaerat quae modi voluptates consequuntur aliquid
             accusamus explicabo, praesentium quibusdam ipsam aperiam iste velit, quia voluptatem dolore quisquam quidem. In, at!
           </p>
-        </details>
+        </details> -->
       </div>
-      <button class="question__btn">More info</button>
+      <div class="questions__box">
+        <div class="questions__question">
+          <h5 class="questions__title">What is Bookmark?</h5>
+          <img src="./images/icon-arrow.svg" alt="Close" class="questions__img" />
+        </div>
+        <p class="questions__answer hide">
+          Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+          Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus
+          luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+        </p>
+      </div>
+      <div class="questions__box">
+        <div class="questions__question">
+          <h5 class="questions__title">How can I request a new browser?</h5>
+          <img src="./images/icon-arrow.svg" alt="Close" class="questions__img" />
+        </div>
+        <p class="questions__answer">
+          Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+          Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus
+          luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+        </p>
+      </div>
+      <div class="questions__box">
+        <div class="questions__question">
+          <h5 class="questions__title">Is there a mobile app?</h5>
+          <img src="./images/icon-arrow.svg" alt="Close" class="questions__img" />
+        </div>
+        <p class="questions__answer hide">
+          Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+          Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus
+          luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+        </p>
+      </div>
+      <div class="questions__box">
+        <div class="questions__question">
+          <h5 class="questions__title">What about other Chromium browsers?</h5>
+          <img src="./images/icon-arrow.svg" alt="Close" class="questions__img" />
+        </div>
+        <p class="questions__answer hide">
+          Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+          Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus
+          luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+        </p>
+      </div>
+      <button class="btn btn--blue btn--info">More info</button>
     </section>
 
     <section class="contact">
-      <div class="contact__users"></div>
-      <p class="contact__info"></p>
+      <div class="contact__users">35,000+ ALREADY JOINED</div>
+      <p class="contact__info">Stay up-to-date with what
+        we’re doing</p>
       <div class="contact__box">
-        <input type="email" name="email" id="" />
-        <button class="contact__btn">Contact Us</button>
+        <input class="contact__input" type="email" name="email" id="" />
+        <div class="contact__error"></div>
+        <button class="btn btn--contact btn--info">Contact Us</button>
       </div>
     </section>
 
     <footer class="footer">
       <div class="footer__nav">
-        <img src="./images/logo-bookmark.svg" alt="Logo Bookmark" class="footer__logo" />
-        <nav class="footer__menu">
+        <img src="./images/logo-bookmark-light.svg" alt="Logo Bookmark" class="footer__logo" />
+        
           <a href="#" class="footer__link">FEATURES</a>
           <a href="#" class="footer__link">PRICING</a>
           <a href="#" class="footer__link">CONTACT</a>
-        </nav>
+        
       </div>
       <div class="footer__media">
-        <a href="#" class="footer__facebook"
-          ><img src="./images/icon-facebook.svg" alt="Facebook" class="footer__facebook-img"
-        /></a>
-        <a href="#" class="footer__twitter"><img src="./images/icon-twitter.svg" alt="Twitter" class="footer__twitter-img" /></a>
+        <a href="#" class="footer__facebook"><div class="footer__facebook-img"></div></a>
+        <a href="#" class="footer__twitter"><div class="footer__twitter-img"></div></a>
       </div>
     </footer>
   </body>
