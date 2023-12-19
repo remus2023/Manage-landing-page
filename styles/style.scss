@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+@import './variables.scss';
+@import './mixin.scss';
+@import './utility.scss';
+
+
+body {
+    max-width: 1440px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin: 0 auto;
+}
+
+@mixin flexBox($flex-width, $flex-height, $flex-direction, $flex-justify-content: flex-start, $flex-align-items: stretch, $flex-gap: normal) {
+    max-width: $flex-width;
+    width: 100%;
+    height: $flex-height;
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $flex-justify-content;
+    align-items: $flex-align-items;
+    gap: $flex-gap;
+}
+
+@mixin typography ($font-color, $font-size, $font-style, $font-weight, $font-lineHeight, $font-spacing, $font-transform, $text-align) {
+    color: $font-color;
+    font-size: $font-size;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    line-height: $font-lineHeight;
+    letter-spacing: $font-spacing;
+    text-transform: $font-transform;
+    text-align: $text-align;
+}
+
+.navigation {
+    @include flexBox(1110px, 46px, row, space-between, center, normal);
+    margin-top: 45px;
+
+    &__menu {
+        @include flexBox(min-content, auto, row, center, center, 44px);
+    }
+
+    &__link {
+        @include typography($color-dark, 13px, normal, 400, 17px, 1.5px, none, center);
+    }
+
+    &__link:hover {
+        color: $bg-login;
+    }
+
+    &__login {
+        @include typography($color-light, 13px, normal, 500, 17px, 1.5px, normal, center);
+        border: 2px solid $bg-login;
+        border-radius: 5px;
+        background: $bg-login;
+        height: 40px;
+        width: 111px;
+        cursor: pointer;
+    }
+
+    &__login:hover {
+        color: $bg-login;
+        background: $color-light;
+    }
+}
+
+.about {
+    @include flexBox(1275px, 630px, row, center, center, unset);
+    margin-left: 165px;
+
+    &__info {
+        @include flexBox(540px, auto, column, center, flex-start, 24px);
+    }
+
+    &__title {
+        @include typography($color-dark, 48px, normal, 500, 52px, -0.15px, normal, left)
+    }
+
+    &__browsers {
+        display: flex;
+        gap: 16px;
+    }
+
+    &__illustration {
+        max-width: 515px;
+        margin-left: 220px;
+        width: 100%;
+        height: 352px;
+        position: relative;
+        top: 120px;
+        background: $bg-btn-blue;
+        border-bottom-left-radius: 316.5px;
+        border-top-left-radius: 316.5px;
+    }
+
+    &__img {
+        position: absolute;
+        top: -140px;
+        left: -190px;
+    }
+}
+
+.features {
+    @include flexBox(1275px, auto, column, center, center, 125px);
+    margin-top: 80px;
+    margin-bottom: 190px;
+
+    &__options {
+        @include flexBox(739px, auto, row, space-between, flex-start, unset);
+    }
+
+    &__item {
+        @include typography($color-dark, 16px, normal, 400, 17px, 0.533px, normal, center);
+        height: 45px;
+        width: 100%;
+        cursor: pointer;
+
+        &:hover {
+            color: $bg-login;
+        }
+
+        &--active {
+            border-bottom: 4px solid $bg-login;
+        }
+    }
+
+    &__slider {
+        @include flexBox(1275px, auto, row, center, center, unset);
+    }
+
+    &__box {
+        @include flexBox(1275px, auto, row, center, center, 125px);
+
+        &--hide {
+            display: none;
+        }
+    }
+
+    &__illustration {
+        max-width: 515px;
+        margin-right: 220px;
+        width: 100%;
+        height: 352px;
+        position: relative;
+        top: 120px;
+        background: $bg-btn-blue;
+        border-bottom-right-radius: 316.5px;
+        border-top-right-radius: 316.5px;
+    }
+
+    &__img {
+        position: absolute;
+        top: -140px;
+        left: 170px;
+    }
+
+    &__content {
+        @include flexBox(445px, auto, column, center, flex-start, 16px);
+    }
+}
+
+.download {
+    @include flexBox(914px, auto, row, center, center, 37px);
+    margin-top: 48px;
+    margin-bottom: 50px;
+
+    &__item {
+        @include flexBox(280px, 371px, column, center, center, 6px);
+        border-radius: 15px;
+        box-shadow: 0px 10px 20px -5px rgba(73, 93, 207, 0.20);
+        padding: 49px 24px 24px;
+
+        &:nth-child(2) {
+            margin-top: 40px;
+        }
+
+        &:nth-child(3) {
+            margin-top: 80px;
+        }
+
+    }
+
+    &__title {
+        @include typography($color-dark, 20px, normal, 500, normal, 0.25px, normal, center);
+        margin-top: 26px;
+    }
+
+    &__version {
+        @include typography($color-dark, 15px, normal, 400, 28px, normal, none, center);
+        opacity: 0.5;
+    }
+
+    &__dots {
+        margin-top: 26px;
+        margin-bottom: 18px;
+    }
+
+}
+
+.questions {
+    @include flexBox(540px, auto, column, center, center, unset);
+    margin: 56px 0 149px 0;
+
+    &__box {
+        width: 100%;
+        border-bottom: 1px solid $color-dark;
+
+        &:nth-child(4) {
+            margin-bottom: 56px;
+
+        }
+    }
+
+    &__question {
+        @include flexBox(540px, auto, row, space-between, center, unset);
+        padding: 20px 24px 13px 0;
+
+        cursor: pointer;
+    }
+
+    &__title {
+        @include typography($color-dark, 18px, normal, 400, 32px, normal, none, left);
+        flex-grow: 1;
+    }
+
+    &__answer {
+        @include typography($color-dark, 16px, normal, 400, 36px, 0.15px, none, left);
+        padding: 12px 0 29px 0;
+        opacity: 0.75;
+    }
+}
+
+.contact {
+    @include flexBox(1440px, auto, column, center, center, 24px);
+    background: $bg-btn-blue;
+    padding: 52px 0;
+
+    &__users {
+        @include typography($color-light, 13px, normal, 500, 40px, 5px, none, center);
+    }
+
+    &__info {
+        @include typography($color-light, 32px, normal, 500, 40px, -0.1px, none, center);
+    }
+
+    &__box {
+        @include flexBox(700px, auto, row, center, center, 10px);
+        position: relative;
+
+    }
+
+    &__error {
+        width: 20px;
+        height: 20px;
+        top: 14px;
+        right: 280px;
+        background: url(../images/icon-error.svg) no-repeat center/cover;
+        position: absolute;
+    }
+
+    &__input {
+        border: 2px solid $color-light;
+        width: 300px;
+        height: 48px;
+        border-radius: 5px;
+        outline: none;
+        padding-left: 20px;
+        @include typography($color-dark, 14px, normal, 400, 28px, 0.25px, none, left);
+    }
+}
+
+.footer {
+    @include flexBox(1440px, auto, row, space-between, center, unset);
+    padding: 35px 165px;
+    background: $color-dark;
+
+    &__nav {
+        @include flexBox(600px, auto, row, space-between, center, unset);
+    }
+
+    &__link {
+        @include typography($color-light, 13px, normal, 400, 17px, 1.5px, none, center);
+
+        &:hover {
+            color: $bg-login;
+        }
+    }
+
+    &__media {
+        @include flexBox(88px, auto, row, space-between, center, unset);
+    }
+
+    &__facebook-img {
+        background: url(../images/icon-facebook.svg) no-repeat center/cover;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+
+        &:hover {
+            background: url(../images/icon-facebook-orange.svg);
+        }
+    }
+
+    &__twitter-img {
+        background: url(../images/icon-twitter.svg) no-repeat center/cover;
+        width: 24px;
+        height: 20px;
+
+        &:hover {
+            background: url(../images/icon-twitter-orange.svg);
+        }
+    }
+
+}

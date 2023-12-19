@@ -1,0 +1,80 @@
+.btn {
+    width: max-content;
+    font: normal normal 500 14px/28px 'Rubik', sans-serif;
+    height: 48px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &--blue {
+        color: $color-light;
+        background: $bg-btn-blue;
+        border: 2px solid $bg-btn-blue;
+        box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.20);
+
+        &:hover {
+            color: $bg-btn-blue;
+            background: $color-light;
+
+        }
+    }
+
+    &--light {
+        color: $color-dark;
+        background: $bg-btn-light;
+        border: 2px solid $bg-btn-light;
+        box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.20);
+
+        &:hover {
+            color: $color-dark;
+            background: $color-light;
+            border: 2px solid $color-dark;
+        }
+
+    }
+
+    &--contact {
+        color: $color-light;
+        background: $bg-login;
+        border: 2px solid $bg-login;
+
+        &:hover {
+            color: $bg-login;
+            background: $color-light;
+        }
+    }
+
+    &--info {
+        padding: 10px 24px;
+    }
+
+    &--w {
+        max-width: 232px;
+        width: 100%;
+    }
+}
+
+.box {
+    @include flexBox(540px, auto, column, center, center, 16px);
+    margin-top: 80px;
+}
+
+.title {
+    @include typography($color-dark, 32px, normal, 500, 52px, -0.1px, none, center);
+}
+
+.description {
+    @include typography($color-dark, 18px, normal, 400, 28px, normal, none, left);
+    opacity: 0.5;
+}
+
+.center {
+    text-align: center !important;
+}
+
+.left {
+    text-align: left !important;
+}
+
+.hide {
+    display: none;
+}
