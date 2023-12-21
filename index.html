@@ -10,6 +10,7 @@
     <title>Frontend Mentor | Bookmark landing page</title>
 
     <link rel="stylesheet" href="./styles/style.css" class="css" />
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <header class="navigation">
@@ -48,12 +49,12 @@
 
     <section class="features">
       <div class="features__options">
-        <div class="features__item features__item--active">Simple Bookmarking</div>
-        <div class="features__item">Speedy Searching</div>
-        <div class="features__item">Easy Sharing</div>
+        <div class="features__item features__item--active" data-target="slider1" id="featuresItem">Simple Bookmarking</div>
+        <div class="features__item" data-target="slider2" id="featuresItem">Speedy Searching</div>
+        <div class="features__item" data-target="slider3" id="featuresItem">Easy Sharing</div>
       </div>
       <div class="features__slider">
-        <div class="features__box">
+        <div class="features__box" id="slider1">
           <div class="features__illustration">
             <img src="./images/illustration-features-tab-1.svg" alt="Illustration tab1" class="features__img" />
           </div>
@@ -66,7 +67,7 @@
             <button class="btn btn--blue btn--info">More info</button>
           </div>
         </div>
-        <div class="features__box features__box--hide">
+        <div class="features__box hide" id="slider2">
           <div class="features__illustration">
             <img src="./images/illustration-features-tab-2.svg" alt="Illustration tab2" class="features__img" />
           </div>
@@ -79,7 +80,7 @@
             <button class="btn btn--blue btn--info">More info</button>
           </div>
         </div>
-        <div class="features__box features__box--hide">
+        <div class="features__box hide" id="slider3">
           <div class="features__illustration">
             <img src="./images/illustration-features-tab-3.svg" alt="Illustration tab3" class="features__img" />
           </div>
@@ -140,47 +141,47 @@
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel quaerat quae modi voluptates consequuntur aliquid
             accusamus explicabo, praesentium quibusdam ipsam aperiam iste velit, quia voluptatem dolore quisquam quidem. In, at!
           </p>
-        </details> -->
-      </div>
-      <div class="questions__box">
-        <div class="questions__question">
-          <h5 class="questions__title">What is Bookmark?</h5>
-          <img src="./images/icon-arrow.svg" alt="Close" class="questions__img" />
+        </details> 
+      </div>-->
+      <div class="questions__box" id="questionsBox">
+        <div class="questions__question" id="questionsQuestion" data-target="questionsAnswer1">
+          <h5 class="questions__title" id="questionsTitle">What is Bookmark?</h5>
+          <img src="./images/icon-arrow.svg" alt="Close1" class="questions__img" id="questionsImg" />
         </div>
-        <p class="questions__answer hide">
+        <p class="questions__answer hide" id="questionsAnswer1">
           Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
           Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus
           luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
         </p>
       </div>
-      <div class="questions__box">
-        <div class="questions__question">
-          <h5 class="questions__title">How can I request a new browser?</h5>
-          <img src="./images/icon-arrow.svg" alt="Close" class="questions__img" />
+      <div class="questions__box" id="questionsBox">
+        <div class="questions__question" id="questionsQuestion" data-target="questionsAnswer2">
+          <h5 class="questions__title" id="questionsTitle">How can I request a new browser?</h5>
+          <img src="./images/icon-arrow.svg" alt="Close2" class="questions__img" id="questionsImg" />
         </div>
-        <p class="questions__answer">
+        <p class="questions__answer hide" id="questionsAnswer2">
           Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
           Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus
           luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
         </p>
       </div>
-      <div class="questions__box">
-        <div class="questions__question">
-          <h5 class="questions__title">Is there a mobile app?</h5>
-          <img src="./images/icon-arrow.svg" alt="Close" class="questions__img" />
+      <div class="questions__box" id="questionsBox">
+        <div class="questions__question" id="questionsQuestion" data-target="questionsAnswer3">
+          <h5 class="questions__title" id="questionsTitle">Is there a mobile app?</h5>
+          <img src="./images/icon-arrow.svg" alt="Close3" class="questions__img" id="questionsImg" />
         </div>
-        <p class="questions__answer hide">
+        <p class="questions__answer hide" id="questionsAnswer3">
           Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
           Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus
           luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
         </p>
       </div>
-      <div class="questions__box">
-        <div class="questions__question">
-          <h5 class="questions__title">What about other Chromium browsers?</h5>
-          <img src="./images/icon-arrow.svg" alt="Close" class="questions__img" />
+      <div class="questions__box" id="questionsBox">
+        <div class="questions__question" id="questionsQuestion" data-target="questionsAnswer4">
+          <h5 class="questions__title" id="questionsTitle">What about other Chromium browsers?</h5>
+          <img src="./images/icon-arrow.svg" alt="Close4" class="questions__img" id="questionsImg" />
         </div>
-        <p class="questions__answer hide">
+        <p class="questions__answer hide" id="questionsAnswer4">
           Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
           Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus
           luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
@@ -191,23 +192,25 @@
 
     <section class="contact">
       <div class="contact__users">35,000+ ALREADY JOINED</div>
-      <p class="contact__info">Stay up-to-date with what
-        we’re doing</p>
-      <div class="contact__box">
-        <input class="contact__input" type="email" name="email" id="" />
-        <div class="contact__error"></div>
-        <button class="btn btn--contact btn--info">Contact Us</button>
+      <p class="contact__info">Stay up-to-date with what we’re doing</p>
+      <div class="contact__box" id="contactBox">
+        <div class="contact__box-input" id="contactBoxInput">
+          <input class="contact__input" type="email" name="email" id="input" maxlength="28" />
+          <p class="contact__message hide" id="contactMessage">Whoops, make sure it’s an email</p>
+        </div>
+        <div class="contact__error hide" id="contactError"></div>
+        <button class="btn btn--contact btn--info" id="contactUs">Contact Us</button>
       </div>
+      <div class="contact__info hide" id="contactInfo">We will contact you soon!</div>
     </section>
 
     <footer class="footer">
       <div class="footer__nav">
         <img src="./images/logo-bookmark-light.svg" alt="Logo Bookmark" class="footer__logo" />
-        
-          <a href="#" class="footer__link">FEATURES</a>
-          <a href="#" class="footer__link">PRICING</a>
-          <a href="#" class="footer__link">CONTACT</a>
-        
+
+        <a href="#" class="footer__link">FEATURES</a>
+        <a href="#" class="footer__link">PRICING</a>
+        <a href="#" class="footer__link">CONTACT</a>
       </div>
       <div class="footer__media">
         <a href="#" class="footer__facebook"><div class="footer__facebook-img"></div></a>
