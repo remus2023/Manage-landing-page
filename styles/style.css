@@ -99,10 +99,6 @@ a {
   text-align: left !important;
 }
 
-.hide {
-  display: none;
-}
-
 body {
   max-width: 1440px;
   width: 100%;
@@ -280,9 +276,6 @@ body {
   align-items: center;
   gap: 125px;
 }
-.features__box--hide {
-  display: none;
-}
 .features__illustration {
   max-width: 515px;
   margin-right: 220px;
@@ -409,6 +402,9 @@ body {
   text-align: left;
   flex-grow: 1;
 }
+.questions__title:hover {
+  color: #FA5959;
+}
 .questions__answer {
   color: #242A45;
   font-size: 16px;
@@ -461,9 +457,29 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  gap: 10px;
+  align-items: flex-start;
+  gap: 16px;
   position: relative;
+}
+.contact__box-input {
+  border: 2px solid #FFFFFF;
+  background: #FFFFFF;
+  border-radius: 5px;
+}
+.contact__box-input--error {
+  border: 2px solid #FA5959;
+  background: #FA5959;
+}
+.contact__message {
+  color: #FFFFFF;
+  font-size: 10px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.25px;
+  text-transform: none;
+  text-align: left;
+  padding: 6px 100px 6px 12px;
 }
 .contact__error {
   width: 20px;
@@ -474,9 +490,9 @@ body {
   position: absolute;
 }
 .contact__input {
-  border: 2px solid #FFFFFF;
+  border: none;
   width: 300px;
-  height: 48px;
+  height: 44px;
   border-radius: 5px;
   outline: none;
   padding-left: 20px;
@@ -488,6 +504,9 @@ body {
   letter-spacing: 0.25px;
   text-transform: none;
   text-align: left;
+}
+.contact__input--error {
+  border: 2px solid #FA5959;
 }
 
 .footer {
@@ -551,4 +570,8 @@ body {
 }
 .footer__twitter-img:hover {
   background: url(../images/icon-twitter-orange.svg);
+}
+
+.hide {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

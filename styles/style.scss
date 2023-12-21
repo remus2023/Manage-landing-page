@@ -132,10 +132,6 @@ body {
 
     &__box {
         @include flexBox(1275px, auto, row, center, center, 125px);
-
-        &--hide {
-            display: none;
-        }
     }
 
     &__illustration {
@@ -216,13 +212,17 @@ body {
     &__question {
         @include flexBox(540px, auto, row, space-between, center, unset);
         padding: 20px 24px 13px 0;
-
         cursor: pointer;
     }
 
     &__title {
         @include typography($color-dark, 18px, normal, 400, 32px, normal, none, left);
         flex-grow: 1;
+
+        &:hover {
+            color: $bg-login;
+        }
+
     }
 
     &__answer {
@@ -246,9 +246,24 @@ body {
     }
 
     &__box {
-        @include flexBox(700px, auto, row, center, center, 10px);
+        @include flexBox(700px, auto, row, center, flex-start, 16px);
         position: relative;
+    }
 
+    &__box-input {
+        border: 2px solid $color-light;
+        background: $color-light;
+        border-radius: 5px;
+
+        &--error {
+            border: 2px solid $bg-login;
+            background: $bg-login;
+        }
+    }
+
+    &__message {
+        @include typography($color-light, 10px, italic, 500, normal, 0.25px, none, left);
+        padding: 6px 100px 6px 12px;
     }
 
     &__error {
@@ -261,13 +276,17 @@ body {
     }
 
     &__input {
-        border: 2px solid $color-light;
+        border: none;
         width: 300px;
-        height: 48px;
+        height: 44px;
         border-radius: 5px;
         outline: none;
         padding-left: 20px;
         @include typography($color-dark, 14px, normal, 400, 28px, 0.25px, none, left);
+
+        &--error {
+            border: 2px solid $bg-login;
+        }
     }
 }
 
@@ -313,4 +332,8 @@ body {
         }
     }
 
+}
+
+.hide {
+    display: none;
 }
