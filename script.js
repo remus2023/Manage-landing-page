@@ -22,32 +22,39 @@ featuresItem.forEach((item) => {
   });
 });
 
-// questionsBox.forEach((item) => {
-//   const questionsQuestion = item.querySelector("#questionsQuestion");
-//   const questionsAnswer = item.querySelector("#questionsAnswer");
-//   console.log(questionsQuestion, questionsAnswer);
-//   questionsQuestion.addEventListener("click", function () {
-//     questionsBox.forEach((element) => {
-//       if (element !== item) {
-//         questionsAnswer.classList.add("hide");
-//       }
-//       if (element === item) {
-//         questionsAnswer.classList.toggle("hide");
-//       }
-//     });
-//   });
-// });
+questionsBox.forEach((item) => {
+  const questionsQuestion = item.querySelector("#questionsQuestion");
+  questionsQuestion.addEventListener("click", function () {
+    const questionsAnswer = item.querySelector("#questionsAnswer");
+    console.log(questionsQuestion, questionsAnswer);
 
-questionsQuestion.forEach((item) => {
-  item.addEventListener("click", function () {
-    const selectedTag = document.getElementById(this.dataset.target);
-    selectedTag.classList.toggle("hide");
+    questionsBox.forEach((element) => {
+      const questionsQuestionTag = element.querySelector("#questionsQuestion");
+      const questionsAnswerTag = element.querySelector("#questionsAnswer");
+      const imgTag = element.querySelector("#questionsImg");
+      if (questionsQuestion !== questionsQuestionTag) {
+        questionsAnswerTag.classList.add("hide");
+        imgTag.src = "./images/icon-arrow.svg";
+      }
+    });
+    questionsAnswer.classList.toggle("hide");
     const img = item.querySelector("#questionsImg");
-    console.log(img);
-
-    selectedTag.classList.contains("hide") ? (img.src = "./images/icon-arrow.svg") : (img.src = "./images/icon-arrow-open.svg");
+    questionsAnswer.classList.contains("hide")
+      ? (img.src = "./images/icon-arrow.svg")
+      : (img.src = "./images/icon-arrow-open.svg");
   });
 });
+
+// questionsQuestion.forEach((item) => {
+//   item.addEventListener("click", function () {
+//     const selectedTag = document.getElementById(this.dataset.target);
+//     selectedTag.classList.toggle("hide");
+//     const img = item.querySelector("#questionsImg");
+//     console.log(img);
+
+//     selectedTag.classList.contains("hide") ? (img.src = "./images/icon-arrow.svg") : (img.src = "./images/icon-arrow-open.svg");
+//   });
+// });
 
 contactUs.addEventListener("click", () => {
   checkInputEmail(input.value);
